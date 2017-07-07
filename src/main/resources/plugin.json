@@ -1,0 +1,6 @@
+{
+  "name": "LavaGrass",
+  "main": "se.llbit.chunky.plugin.BlockMod",
+  "version": "1.0",
+  "targetVersion": "1.4.3"
+}

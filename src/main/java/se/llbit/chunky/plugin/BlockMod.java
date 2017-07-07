@@ -18,7 +18,6 @@ import se.llbit.chunky.Plugin;
 import se.llbit.chunky.main.Chunky;
 import se.llbit.chunky.main.ChunkyOptions;
 import se.llbit.chunky.resources.Texture;
-import se.llbit.chunky.resources.TexturePackLoader;
 import se.llbit.chunky.ui.ChunkyFx;
 import se.llbit.chunky.world.Block;
 
@@ -31,14 +30,12 @@ public class BlockMod implements Plugin {
   @Override public void attach(Chunky chunky) {
     Block.set(Block.GRASS_ID, new Block(Block.GRASS_ID, "Not Grass", Texture.lava) {
       {
-        isEmitter = true;
-        emittance = 1.0;
+        emittance = 1.0f;
       }
     });
   }
 
-  public static void main(String[] args)
-      throws FileNotFoundException, TexturePackLoader.TextureLoadingError {
+  public static void main(String[] args) throws Exception {
     // Start Chunky normally with this plugin attached.
     Chunky.loadDefaultTextures();
     Chunky chunky = new Chunky(ChunkyOptions.getDefaults());
